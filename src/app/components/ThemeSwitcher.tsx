@@ -15,11 +15,19 @@ export default function ThemeSwitcher() {
 
   if(!mounted) return null
 
+  function onHandleClick(isDark:boolean) {
+    if(theme==='dark'){
+        setTheme('light')
+    }else{
+        setTheme('dark')
+    }  
+  }
 
   return (
     <div>
-      <Button onClick={() => setTheme('light')}><BsSunFill/></Button>
-      <Button onClick={() => setTheme('dark')}><BsMoonFill/></Button>
+      <Button isIconOnly onClick={ () => onHandleClick(theme === 'dark' ? true : false)} >
+        { theme === 'dark' ? <BsMoonFill/> :  <BsSunFill/> } 
+      </Button>
     </div>
   )
 };
