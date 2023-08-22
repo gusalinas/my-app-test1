@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import MyNabvar from './components/MyNabvar'
 import { Textarea } from '@nextui-org/input'
 import { Card, CardBody } from '@nextui-org/card'
