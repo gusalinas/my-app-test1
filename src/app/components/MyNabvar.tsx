@@ -2,6 +2,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, Navba
 import { Link } from "@nextui-org/link";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { Button } from "@nextui-org/button";
+import { Image } from "@nextui-org/image";
 
 export default function MyNabvar() {
 
@@ -26,15 +27,23 @@ export default function MyNabvar() {
 
             <NavbarContent className="sm:hidden pr-3" justify="center">
                 <NavbarBrand>
-
-                    <p className="font-bold text-inherit">ACME</p>
+                    <Image
+                        width={60}
+                        alt="Logo"
+                        src="images/logo1.png"
+                        />
+                    <p className="font-bold text-inherit">TheOrchis</p>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                <NavbarBrand>
-
-                    <p className="font-bold text-inherit">ACME</p>
+                <NavbarBrand className="mr-20">
+                    <Image
+                        width={60}
+                        alt="Logo"
+                        src="images/logo1.png"
+                        />
+                    <p className="font-bold text-inherit">TheOrchis</p>
                 </NavbarBrand>
                 <NavbarItem>
                     <Link color="foreground" href="#">
@@ -42,7 +51,7 @@ export default function MyNabvar() {
                     </Link>
                 </NavbarItem>
                 <NavbarItem isActive>
-                    <Link href="#" aria-current="page" color="warning">
+                    <Link href="#" aria-current="page" color="secondary">
                         Customers
                     </Link>
                 </NavbarItem>
